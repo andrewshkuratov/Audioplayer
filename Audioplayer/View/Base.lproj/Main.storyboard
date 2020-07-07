@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pvI-dd-x9j">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Audio Player Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="AudioPlayerController" customModule="Audioplayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Nature" translatesAutoresizingMaskIntoConstraints="NO" id="x4h-pQ-YM4">
+                                <rect key="frame" x="0.0" y="88" width="414" height="333"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGb-eY-iYP">
+                                <rect key="frame" x="334" y="431" width="50" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Y0L-rz-att"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RUd-9r-oFr" customClass="PlayPauseButton" customModule="Audioplayer" customModuleProvider="target">
+                                <rect key="frame" x="182" y="502" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Ghx-8n-JSB"/>
+                                    <constraint firstAttribute="height" constant="50" id="Uc8-WW-0yn"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.40672792839999999" green="0.37266143000000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="Play"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="PlayPauseSong:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kTB-3e-nGq"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="hZE-X9-wvV">
+                                <rect key="frame" x="8" y="462" width="398" height="31"/>
+                                <connections>
+                                    <action selector="SongTimer:" destination="BYZ-38-t0r" eventType="valueChanged" id="yq1-Vu-tCU"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XzK-8R-Wq8" customClass="StopButton" customModule="Audioplayer" customModuleProvider="target">
+                                <rect key="frame" x="242" y="502" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="JCk-uW-6D0"/>
+                                    <constraint firstAttribute="height" constant="50" id="n3O-KU-X99"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="Stop"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="StopSong:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Zs-jb-fPP"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nct-QC-5YP">
+                                <rect key="frame" x="10" y="431" width="314" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="RUd-9r-oFr" firstAttribute="top" secondItem="hZE-X9-wvV" secondAttribute="bottom" constant="10" id="6QU-oA-kHL"/>
+                            <constraint firstItem="x4h-pQ-YM4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="DOI-QC-A2W"/>
+                            <constraint firstItem="RUd-9r-oFr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NTN-4S-2xZ"/>
+                            <constraint firstItem="nct-QC-5YP" firstAttribute="top" secondItem="x4h-pQ-YM4" secondAttribute="bottom" constant="10" id="Onc-GT-CxJ"/>
+                            <constraint firstItem="x4h-pQ-YM4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PqD-kQ-npD"/>
+                            <constraint firstItem="XzK-8R-Wq8" firstAttribute="top" secondItem="hZE-X9-wvV" secondAttribute="bottom" constant="10" id="R7G-aM-O9f"/>
+                            <constraint firstItem="XzK-8R-Wq8" firstAttribute="leading" secondItem="RUd-9r-oFr" secondAttribute="trailing" constant="10" id="TMt-vT-RI5"/>
+                            <constraint firstItem="WGb-eY-iYP" firstAttribute="top" secondItem="x4h-pQ-YM4" secondAttribute="bottom" constant="10" id="a2Q-dT-m60"/>
+                            <constraint firstItem="hZE-X9-wvV" firstAttribute="top" secondItem="nct-QC-5YP" secondAttribute="bottom" constant="10" id="f9l-WX-MIg"/>
+                            <constraint firstItem="WGb-eY-iYP" firstAttribute="leading" secondItem="nct-QC-5YP" secondAttribute="trailing" constant="10" id="hDN-Ci-6vA"/>
+                            <constraint firstItem="x4h-pQ-YM4" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="nL2-zM-MRL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WGb-eY-iYP" secondAttribute="trailing" constant="30" id="p2j-CR-SYg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hZE-X9-wvV" secondAttribute="trailing" constant="10" id="r0M-Qk-6nx"/>
+                            <constraint firstItem="hZE-X9-wvV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="soX-Rv-DMN"/>
+                            <constraint firstItem="nct-QC-5YP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="sry-0A-MMR"/>
+                            <constraint firstItem="hZE-X9-wvV" firstAttribute="top" secondItem="WGb-eY-iYP" secondAttribute="bottom" constant="10" id="tDe-55-Kbk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vD3-CZ-fVH"/>
+                    <connections>
+                        <outlet property="audioProgress" destination="hZE-X9-wvV" id="HFe-xU-W5A"/>
+                        <outlet property="playPauseButton" destination="RUd-9r-oFr" id="KOc-AW-gvt"/>
+                        <outlet property="timeLabel" destination="WGb-eY-iYP" id="ToS-CX-h0M"/>
+                        <outlet property="trackTitle" destination="nct-QC-5YP" id="pPa-Hk-sfS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="129.91071428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1GZ-Hw-1X7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pvI-dd-x9j" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="diw-hG-P5E">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="NpD-Qq-nxN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ztf-UL-35y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Nature" width="500" height="333"/>
+        <image name="Play" width="50" height="50"/>
+        <image name="Stop" width="256" height="256"/>
+    </resources>
+</document>
